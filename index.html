@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator-0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+       <p>Введите число 1 <input type="text" id="n1"></p>
+       <p>Введите число 2 <input type="text" id="n2"></p>
+       <button onclick="plus()">+</button>
+       <button onclick="minus()">-</button>
+       <button onclick="multiply()">*</button>
+       <button onclick="division()">/</button>
+       <hr>
+       <p id="out">Результат:</p>
+   </div>
+    
+    
+    <script> 
+             
+        function plus() {  
+            var number1 = document.getElementById("n1").value;
+            var number2 = document.getElementById("n2").value;
+            var result;
+
+            number1 = +number1; // приводим значение к числу
+            number2 = +number2;
+            result = number1 + number2;
+            document.getElementById("out").innerHTML = result;
+        }
+        
+        function minus() {  
+            var number1 = document.getElementById("n1").value;
+            var number2 = document.getElementById("n2").value;
+            var result;
+
+            result = number1 - number2;
+            document.getElementById("out").innerHTML = result;
+        }
+        
+        function multiply() {  
+            var number1 = document.getElementById("n1").value;
+            var number2 = document.getElementById("n2").value;
+            var result;
+
+            result = number1 * number2;
+            document.getElementById("out").innerHTML = result;
+        }
+        
+        function division() {  
+            var number1 = document.getElementById("n1").value;
+            var number2 = document.getElementById("n2").value;
+            var result;
+
+            result = number1 / number2;
+            document.getElementById("out").innerHTML = result;
+        }      
+           
+    </script>
+</body>
+</html>
